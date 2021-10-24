@@ -1,3 +1,13 @@
+'''Classe Retangulo: Crie uma classe que modele um retangulo:
+
+Atributos: LadoA, LadoB (ou Comprimento e Largura, ou Base e Altura, a escolher)
+Métodos: Mudar valor dos lados, Retornar valor dos lados, calcular Área e calcular Perímetro;
+Crie um programa que utilize esta classe. Ele deve pedir ao usuário que informe as medidades de um local.
+Depois, deve criar um objeto com as medidas e calcular a quantidade de pisos e de rodapés necessárias para o local.'''
+
+
+
+
 from clsReta import Retangulo
 
 i = True
@@ -27,8 +37,15 @@ while i:
             roda2 = input('Digite o valor do segundo lado do rodapé:')
             check3 = True
         elif op == 5:
+            print('\n\n\n#################################################\n')
+            print(f'Valor do lado 1 da planta= {Plan1}')
+            print(f'Valor do lado 2 da planta= {Plan2}')
+            print(f'Valor do lado 1 do piso= {Piso1}')
+            print(f'Valor do lado 2 do piso= {Piso2}')
+            print(f'Valor do lado 1 do rodapé= {roda1}')
+            print(f'Valor do lado 2 do rodapé= {roda2}')
+            print('\n#################################################\n')
 
-            i=False
         elif op == 6:
             print('Encerrando...')
             i=False
@@ -57,6 +74,9 @@ while i:
                     print(total)
                     check6=True
             elif op2 ==4:
-                    peri2 = rodape.calc_peri()
-                    Total2=float(peri1/peri2)
-                    print(Total2)
+                mLado = rodape.calc_roda()
+                print(peri1)
+                qtdRoda = float(peri1/mLado)
+                print(qtdRoda)
+                print(f'\n\n Serão necessarios {qtdRoda} rodapés.')
+
