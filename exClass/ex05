@@ -1,0 +1,42 @@
+''' 5 - Classe Conta Corrente: Crie uma classe para implementar uma conta corrente.
+A classe deve possuir os seguintes atributos: número da conta, nome do correntista
+e saldo. Os métodos são os seguintes: alterarNome, depósito e saque; No construtor,
+saldo é opcional, com valor default zero e os demais atributos são obrigatórios.'''
+
+class conta_corrente:
+    def __init__(self, num, name, balance):
+        self.num = str(num)
+        self.name = str(name)
+        self.balace = float(balance)
+    
+    def alterarNome(self,newName):
+        self.name = newName
+        print(f'NOme alterado para: [{self.name}]')
+        print('##############################################################')
+        
+
+    def deposito(self, valor):
+        print(f'Valor atual é de : [{self.balace}]')
+        self.balace += float(valor)
+        print(f'Deposito de: [{float(valor)}] \nO valor em conta é de: [{self.balace}]')
+        print('##############################################################')
+       
+
+    
+    def saque(self,valor):
+        print(f'Valor atual é de :[{self.balace}]')
+        self.balace -= float(valor)
+        print(f'Saque de: [{float(valor)}] \nO valor em conta é de: [{self.balace}]')
+        print('##############################################################')
+
+
+
+conta_teste = conta_corrente('97908','Rodrigo Neves', 100.00)
+
+print(f'Nome:{conta_teste.name} / Numero da conta:{conta_teste.num} / Saldo:{conta_teste.balace}')
+print('##############################################################')
+conta_teste.alterarNome('Rodolfo')
+
+conta_teste.deposito(200)
+conta_teste.saque(30.00)
+
