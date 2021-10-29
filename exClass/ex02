@@ -1,0 +1,34 @@
+'''Classe Quadrado: Crie uma classe que modele um quadrado:
+
+Atributos: Tamanho do lado
+Métodos: Mudar valor do Lado, Retornar valor do Lado e calcular Área;'''
+
+class quad:
+    def __init__(self, lado):
+        self.lado = lado
+
+    def muda(self, Nlado):
+        self.lado = Nlado
+    def dataShow(self):
+        print(f'tamanho desta buceta é:{self.lado}')
+    def calcA(self):
+        print(f'Area é igual {self.lado*self.lado}')
+       
+ ###############################################################
+ 
+quadrado = quad(2)
+quadrado.dataShow()
+quadrado.calcA()
+quadrado.muda(6)
+quadrado.dataShow()
+quadrado.calcA()
+
+''' 
+ elif op==2:
+     Piso1 = input('Digite o valor do primeiro lado do Piso:')
+     Piso2 = input('Digite o valor do segundo lado da Piso:')
+     check2  = True
+ elif op == 3:
+     roda1 = input('Digite o valor do primeiro lado do rodapé:')
+     roda2 = input('Digite o valor do segundo lado do rodapé:')
+     check3  = True''''
